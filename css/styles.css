@@ -1,0 +1,22 @@
+.container {
+
+    margin-top: 50px;
+    width: 50%;
+    height: auto;
+
+}
+
+.my-text {
+
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+}
+
+.submit {
+
+    margin-left: 15px; 
+    margin-top: 10px
+
+}
