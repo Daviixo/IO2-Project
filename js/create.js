@@ -27,8 +27,14 @@ function sendinfo(){
         // Get values
         var name = getInputVal('name');
         var email = getInputVal('email');
+        var deliveryaddress = getInputVal('deliveryAddress');
+        var phoneNumber = getInputVal('phoneNumber');
+        var paymentForm = getInputVal('paymentForm');
+        var order = getInputVal('order');
+        var quantity = getInputVal('quantity');
+        var comments = getInputVal('comments');
 
-        saveMessage(name, email);
+        saveMessage(name, email, deliveryaddress, phoneNumber, paymentForm, order, quantity, comments);
         document.getElementById('contactForm').reset();
 
         alert('Data sent! :D')
@@ -41,11 +47,17 @@ function sendinfo(){
     }
 
     // Save message to firebase
-    function saveMessage(name, email) {
+    function saveMessage(name, email, deliveryaddress, phoneNumber, paymentForm, order, quantity, comments) {
         var newMessageRef = messagesRef.push();
         newMessageRef.set({
             name: name,
             email: email,
+            deliveryaddress: deliveryaddress,
+            phoneNumber: phoneNumber,
+            paymentForm: paymentForm,
+            order: order,
+            quantity: quantity,
+            comments: comments,
         });
     }
         
