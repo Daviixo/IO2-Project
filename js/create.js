@@ -65,7 +65,7 @@ function sendinfo() {
 
     } catch (error) {
 
-        alert('An error occurred: ' + error)
+        console.log('Error: ' + error)
 
     }
 
